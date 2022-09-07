@@ -1,0 +1,42 @@
+<h1>Student </h1>
+
+<div>
+    <ul *ngFor="let s of students">
+            <li>{{s.name}}</li>
+            <li>{{s.gender}}</li>
+            <li>{{s.marks}}</li>
+            
+    </ul>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>City</th>
+        </tr>
+    
+        <tr *ngFor = "let s of students">
+                <div *ngIf = "s.age>15">
+                <td>
+                    {{s.name}}
+                </td>
+                <td>
+                    {{s.gender}}
+                </td>
+                <td>
+                    {{s.marks}}
+                </td>
+                
+                <td>
+                    <button (click) = "data(s.name)">ACTION</button>
+                </td>
+            </div>
+            
+        </tr>
+    </table>
+
+</div>
+
+
+<div>
+    <button class="btn btn-primary" (click)="data">DATA</button>
+</div>

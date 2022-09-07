@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LaststName</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="doctors">
+      <tr *ngFor="let d of doctors ">
+        <th scope="row">{{d.Id}}</th>
+        <td>{{d.FirstName}}</td>
+        <td>{{d.LaststName}}</td>
+        <td>{{d.Email}}</td>
+      </tr>
+      
+        
+    </tbody>
+</table>
